@@ -80,9 +80,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/CSSRulePlugin.min.js"></script>
 
   <script>
+    // Init
     let tl = gsap.timeline({ defaults: { ease: "power4.inOut", duration: 2 } })
     let flagPoles = CSSRulePlugin.getRule(".card:before");
 
+    // Animation
     tl.to('h1', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, y: 0, duration: 2.2 })
     tl.to('.form', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, y: 0 }, "-=2")
     tl.from('.card', { scaleY: 0, stagger: .2 }, "-=2")
